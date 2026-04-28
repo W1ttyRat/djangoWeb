@@ -23,8 +23,13 @@ def main(request):
     return HttpResponse(template.render())
 
 def testing(request):
+    mydata = Member.objects.all()
+    mydatavalues = Member.objects.all().values()
+    mydatanames = Member.objects.values_list('firstname')
     template = loader.get_template('template.html')
     context = {
-        'fruits': ['apple', 'banana', 'cherry'],
+        'mymembers': mydata,
+        'mymembersvalues': mydatavalues,
+        'mymembersnames': mydatanames,
     }
     return HttpResponse(template.render(context, request))
