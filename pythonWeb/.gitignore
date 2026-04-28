@@ -1,0 +1,5 @@
+# Keep virtual environment files ignored, but allow the Django project folder.
+*
+!.gitignore
+!my_tennis_club/
+!my_tennis_club/**
