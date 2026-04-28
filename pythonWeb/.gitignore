@@ -3,3 +3,8 @@
 !.gitignore
 !my_tennis_club/
 !my_tennis_club/**
+
+# Ignore generated Python/cache and local DB artifacts in the Django app.
+my_tennis_club/**/__pycache__/
+my_tennis_club/**/*.py[cod]
+my_tennis_club/db.sqlite3
